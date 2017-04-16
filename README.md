@@ -6,15 +6,15 @@ A Joomla Plugin to add xml form fields to any module
 
 How to use:
 
-- Create your module's override in the html folder of your template according to the Joomla!
+- Create your module's override in the html folder of your template according to the Joomla official documentation
 
-- Create the xml file via ftp with the desired name as per the prescription of the readme file embedded in the zip file of the module
+- Create the xml file via ftp with the desired name as per the prescription of the readme file embedded in the zip file of the module (exists a form example.xml to refference inside of the plugin folder)
 
 - Installs enable plugin
 
-- Within the plugin settings, enter the names of the modules and their respective xml files (without the xml extension) separated by commas. Ex: mod_articles_latest, mod_articles_category and nomedoxml1, nomoxox2.
+- Within the plugin settings, enter the names of the modules and their respective xml files (without the xml extension) separated by commas. Ex: mod_articles_latest, mod_articles_category and xmlname1, xmlname2.
  
-- Create your module and save it. After saving you will be able to see the custom fields. This step may be before others. The important thing is to save to, only after you can see the custom fields working. In the next version I will eliminate this need to save before. Promise.
+- Create your module and save it. After saving you will be able to see the custom fields. This step may be before others. The important thing is to save to, only after you can see the custom fields working. In the next version I will eliminate this need to save before. I promess.
 
 
 -- Em Português (in portuguese) --
@@ -23,9 +23,9 @@ Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módu
 
 Modo de utilização:
 
-- Cria o substituto (override) do teu módulo na pasta html do teu template conforme o manual do Joomla!
+- Cria o substituto (override) do teu módulo na pasta html do teu template conforme a documentação do Joomla!
 
-- Cria o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me embutido no arquivo zip do módulo
+- Cria o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me embutido no arquivo zip do módulo (existe um formulário example.xml para referência dentro da pasta do plugin). 
 
 - Instala habilita o plugin
 
