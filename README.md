@@ -16,6 +16,8 @@ How to use:
 
 - Create your module and save it. After saving you will be able to see the custom fields. This step may be before others. The important thing is to save it. Only after you can see the custom fields working. In the next version I will eliminate this need to save before. I promess.
 
+You can see or download a smart override example for Mod Articles Latest in this link: https://github.com/uzielweb/mod_articles_latest_override
+
 -- Em Português (in portuguese) --
 
 Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo
@@ -31,3 +33,5 @@ Modo de utilização:
 - Dentro das configurações do plugin digita os nomes dos módulos e seus respectivos arquivos xml (sem a extensão xml) separados por vírgulas. Ex.: mod_articles_latest,mod_articles_category e nomedoxml1, nomedoxml2.
 
 - Cria teu módulo e salva-o. Após salvar poderás ver os campos personalizados. Este passo pode ser antes dos outros. O Importante é salvar para, só depois, poder ver os campos personalizados funcionando. Numa próxima versão eliminarei essa necessidade de salva antes. Prometo.
+
+Você pode ver ou baixar um exemplo de substituição inteligente para artigos do Módulo Últimos Artigos neste link: https://github.com/uzielweb/mod_articles_latest_override
