@@ -18,6 +18,10 @@ How to use:
 
 You can see or download a smart override example for Mod Articles Latest in this link: https://github.com/uzielweb/mod_articles_latest_override
 
+##Standard Form Field Types
+
+See the link: https://docs.joomla.org/Form_field
+
 -- Em Português (in portuguese) --
 
 Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo
@@ -35,3 +39,8 @@ Modo de utilização:
 - Cria teu módulo e salva-o. Após salvar poderás ver os campos personalizados. Este passo pode ser antes dos outros. O Importante é salvar para, só depois, poder ver os campos personalizados funcionando. Numa próxima versão eliminarei essa necessidade de salva antes. Prometo.
 
 Você pode ver ou baixar um exemplo de substituição inteligente para artigos do Módulo Últimos Artigos neste link: https://github.com/uzielweb/mod_articles_latest_override
+
+##Tipos de Campo Padrões do Joomla
+
+Acesse o seguinte endereço: https://docs.joomla.org/Form_field
+
