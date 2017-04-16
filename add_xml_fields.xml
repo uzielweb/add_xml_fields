@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" method="upgrade" type="plugin" group="system">
+	<name>plg_system_add_xml_fields</name>
+	<author></author>
+	<creationDate>2017 april 13</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_ADD_XML_FIELDS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="add_xml_fields">add_xml_fields.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_system_add_xml_fields.ini</language>
+		<language tag="en-GB">en-GB.plg_system_add_xml_fields.sys.ini</language>
+		<language tag="pt-BR">pt-BR.plg_system_add_xml_fields.ini</language>
+		<language tag="pt-BR">pt-BR.plg_system_add_xml_fields.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+             <field name="themodules" type="text" label="MODULES" description="MODULES_DESC" default="mod_articles_latest" />
+             <field name="filenames" type="text" label="FILES" description="FILES_DESC" default="" />
+             <field name="thepath" type="list" label="PATH" description="PATH_DESC" default="plugins">
+             <option value="plugins">PLUGINS</option>
+             <option value="template_override">TEMPLATE_OVERRIDE</option>
+             </field>
+		    </fieldset>
+        </fields>
+	</config>
+</extension>
