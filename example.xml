@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="params">
+    <fieldset name="advanced">
+    <field type="spacer" hr="true" />
+        <field name="pretext" type="textarea" default="" cols="40" rows="5" label="Pre Text" filter="raw" description="Text before" />
+        <field name="posttext" type="textarea" default="" cols="40" rows="5" label="Post Text" filter="raw" description="Text after" />
+    </fieldset>
+</fields>
+</form>
