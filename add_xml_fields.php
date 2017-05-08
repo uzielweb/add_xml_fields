@@ -30,34 +30,29 @@ class plgSystemAdd_xml_fields extends JPlugin
         $option = $app->input->get('option');
 
 
-                if ($app->isAdmin() or $app->isSite())
-                {
-
                         $pieces     = explode(",", $this->params->get('filenames'));
                         $themodules = explode(",", $this->params->get('themodules'));
                         $db    = JFactory::getDBO();
-                        $query = "SELECT template FROM #__template_styles WHERE client_id = 0 AND home = 1";
-                        $db->setQuery($query);
-                        $defaultemplate = $db->loadResult();
 
-                         $db2    = JFactory::getDBO();
-                         $query2 = 'SELECT module'
+                         $query = 'SELECT module'
                          .' FROM #__modules'
                          .' WHERE id = ' . $db->Quote($app->input->get("id"));
-                         $db2->setQuery($query2);
-                        $module = $db2->loadResult();
+                         $db->setQuery($query);
+                        $module = $db->loadResult();
 
                         foreach($themodules as $key=>$themodule){
+                            $themodule = trim($themodule);
                               if ($module == $themodule){
-
-                               if ($this->params->get('thepath') == 'template_override') {
-                                JForm::addFormPath(JPATH_SITE . '/templates/' . $defaultemplate . '/html/' . $themodule . '/');
-                                }
-                                if ($this->params->get('thepath') == 'plugins') {
-                                     JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
-                                }
+                                  switch ($this->params->get('thepath')) {
+                                      case 'template_override':
+                                          JForm::addFormPath(JPATH_SITE . '/templates/' . $app->getTemplate() . '/html/' . $themodule . '/');
+                                          break;
+                                      case 'plugins':
+                                          JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
+                                          break;
+                                  }
                                  foreach ($pieces as $k => $piece) {
-                                $form->loadFile($pieces[$key], false);
+                                    $form->loadFile($pieces[$key], false);
                                  }
                               }
 
@@ -81,4 +76,4 @@ class plgSystemAdd_xml_fields extends JPlugin
 
     }
 }
-?>
+
