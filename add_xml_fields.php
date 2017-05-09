@@ -30,9 +30,13 @@ class plgSystemAdd_xml_fields extends JPlugin
         $option = $app->input->get('option');
 
 
+
+
                         $pieces     = explode(",", $this->params->get('filenames'));
                         $themodules = explode(",", $this->params->get('themodules'));
                         $db    = JFactory::getDBO();
+
+
 
                          $query = 'SELECT module'
                          .' FROM #__modules'
@@ -43,16 +47,20 @@ class plgSystemAdd_xml_fields extends JPlugin
                         foreach($themodules as $key=>$themodule){
                             $themodule = trim($themodule);
                               if ($module == $themodule){
-                                  switch ($this->params->get('thepath')) {
-                                      case 'template_override':
+                               switch ($this->params->get('thepath')) {
+
+                               case 'template_override':
                                           JForm::addFormPath(JPATH_SITE . '/templates/' . $app->getTemplate() . '/html/' . $themodule . '/');
                                           break;
                                       case 'plugins':
                                           JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
                                           break;
-                                  }
+
+                               }
+
+
                                  foreach ($pieces as $k => $piece) {
-                                    $form->loadFile($pieces[$key], false);
+                                $form->loadFile($pieces[$key], false);
                                  }
                               }
 
@@ -68,12 +76,12 @@ class plgSystemAdd_xml_fields extends JPlugin
 
                 }
 
-                return true;
+
 
 
 
 
 
     }
-}
 
+?>
