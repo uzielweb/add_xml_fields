@@ -7,7 +7,7 @@
 	<license></license>
 	<authorEmail></authorEmail>
 	<authorUrl></authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>PLG_SYSTEM_ADD_XML_FIELDS_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="add_xml_fields">add_xml_fields.php</filename>
