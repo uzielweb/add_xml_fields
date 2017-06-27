@@ -23,7 +23,7 @@ How to use:
 
 You can see or download a smart override example for Mod Articles Latest in this link: https://github.com/uzielweb/mod_articles_latest_override
 
-##Standard Form Field Types
+### Standard Form Field Types
 
 See the link: https://docs.joomla.org/Form_field
 
