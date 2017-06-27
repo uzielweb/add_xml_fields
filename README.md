@@ -30,7 +30,7 @@ See the link: https://docs.joomla.org/Form_field
 ### -- Em Português (in portuguese) --
 ###### AVISO - Este plugin adiciona e/ou muda campos xml. Este plugin não sobrescreve completamente o formulário xml de models. Eu farei essa função na próxima versão 1.0.6 (espero). Se você precisar substituir todo o formulário XML (para alterar e remover ou ocultar campos), sugiro ICUE FORM XML OVERRIDE (icueproject.com/products/override-xml-forms)
 
-###### Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo
+#### Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo
 
 Modo de utilização:
 
