@@ -38,7 +38,7 @@ Modo de utilização:
 
 - deves criar o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me embutido no arquivo zip do módulo (existe um formulário example.xml para referência dentro da pasta do plugin). 
 
-- para os componentes podes escolher entre "Substituição do tema do ADMINISTRATOR ou SITE" e "Tema de sistema do ADMINISTRATOR ou SITE"
+- para os componentes podes escolher entre "Substituição do tema do ADMINISTRADOR ou SITE" e "Tema de sistema do ADMINISTRADOR ou SITE"
 - para tema de sistema do administrador deves criar o xml em administrator/template/system/forms/com_nomedocomponente/teu.xml
 - para tema de sistema do site deves criar o xml em template/system/forms/com_nomedocomponente/teu.xml
 - para substituição do tema do ADMINISTRADOR deves criar o xml em administrator/templates/teu_tema_padrão/html/com_nome_do_componente/forms/your.xml 
