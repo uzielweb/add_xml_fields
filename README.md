@@ -52,7 +52,7 @@ Modo de utilização:
 
 Você pode ver ou baixar um exemplo de substituição inteligente para artigos do Módulo Últimos Artigos neste link: https://github.com/uzielweb/mod_articles_latest_override
 
-##Tipos de Campo Padrões do Joomla
+### Tipos de Campo Padrões do Joomla
 
 Acesse o seguinte endereço: https://docs.joomla.org/Form_field
 
