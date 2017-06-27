@@ -1,10 +1,10 @@
-# add_xml_fields
+# ADD XML FIELDS JOOMLA PLUGIN
 
 ### -- In English (em inglês) --
 
 ###### ADVISE - This plugin add and/or change xml fields. This plugin do not OVERRIDE completely the xml form from models. I Will make this function in the next 1.0.6 version (I hope). If you need override the entire XML form (to change and remove or hide fields) I suggest ICUE FORM XML OVERRIDE (icueproject.com/products/override-xml-forms)
 
-A Joomla Plugin to add xml form fields to any module
+#### A Joomla Plugin to add xml form fields to any module
 
 How to use:
 
@@ -28,8 +28,9 @@ You can see or download a smart override example for Mod Articles Latest in this
 See the link: https://docs.joomla.org/Form_field
 
 ### -- Em Português (in portuguese) --
-###### AVISO - Este plugin adiciona e / ou muda campos xml. Este plugin não excede completamente o formulário xml dos modelos. Eu farei essa função na próxima versão 1.0.6 (espero). Se você precisar substituir todo o formulário XML (para alterar e remover ou ocultar campos), sugiro ICUE FORM XML OVERRIDE (icueproject.com/products/override-xml-forms)
-Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo
+###### AVISO - Este plugin adiciona e/ou muda campos xml. Este plugin não sobrescreve completamente o formulário xml de models. Eu farei essa função na próxima versão 1.0.6 (espero). Se você precisar substituir todo o formulário XML (para alterar e remover ou ocultar campos), sugiro ICUE FORM XML OVERRIDE (icueproject.com/products/override-xml-forms)
+
+###### Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo
 
 Modo de utilização:
 
