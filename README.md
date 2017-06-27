@@ -31,11 +31,15 @@ Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módu
 
 Modo de utilização:
 
-- Cria o substituto (override) do teu módulo ou componente na pasta html do teu template conforme a documentação do Joomla!
+- deves criar o substituto (override) do teu módulo ou componente na pasta html do teu template conforme a documentação do Joomla! 
 
-- Cria o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me embutido no arquivo zip do módulo (existe um formulário example.xml para referência dentro da pasta do plugin). 
+- deves criar o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me embutido no arquivo zip do módulo (existe um formulário example.xml para referência dentro da pasta do plugin). 
 
-- para os componentes você pode escolher entre "Substituição do tema do ADMINISTRATOR ou SITE" e "Tema de sistema do ADMINISTRATOR ou SITE" (neste caso: para tema de sistema do adminsitrador crie em administrator/template/system/forms/com_nomedocomponente/teu.xml e parapara tema de sistema do site crie em template/system/forms/com_nomedocomponente/teu.xml). Se você escolher "Substituição do tema do ADMINISTRATOR ou SITE": para substituição do tema do ADMINISTRADOR crie em administrator/templates/teu_tema_padrão/html/com_componentname/forms/your.xml para substituição do tema do SITE crie em templates/teu_tema_padrão/html/com_nomedocomponente/forms/teu.xml
+- para os componentes podes escolher entre "Substituição do tema do ADMINISTRATOR ou SITE" e "Tema de sistema do ADMINISTRATOR ou SITE"
+- para tema de sistema do administrador deves criar o xml em administrator/template/system/forms/com_nomedocomponente/teu.xml
+- para tema de sistema do site deves criar o xml em template/system/forms/com_nomedocomponente/teu.xml
+- para substituição do tema do ADMINISTRADOR deves criar o xml em administrator/templates/teu_tema_padrão/html/com_nome_do_componente/forms/your.xml 
+- para substituição do tema do SITE deves criar em templates/teu_tema_padrão/html/com_nome_do_componente/forms/teu.xml
 
 - Instala e habilita o plugin
 
