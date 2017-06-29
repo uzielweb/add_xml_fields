@@ -4,7 +4,7 @@
 
 ###### ADVISE - This plugin add and/or change xml fields. This plugin do not OVERRIDE completely the xml form from models. I Will make this function in the next 1.0.6 version (I hope). If you need override the entire XML form (to change and remove or hide fields) I suggest ICUE FORM XML OVERRIDE (icueproject.com/products/override-xml-forms)
 
-#### A Joomla Plugin to add xml form fields to any site module, site component or adminsitrator component
+#### A Joomla Plugin to add xml form fields to any site module, site component or administrator component
 
 How to use:
 
@@ -23,14 +23,14 @@ How to use:
 
 You can see or download a smart override example for Mod Articles Latest in this link: https://github.com/uzielweb/mod_articles_latest_override
 
-### Standard Form Field Types
+### Standard Form Field Types for Joomla
 
 See the link: https://docs.joomla.org/Form_field
 
 ### -- Em Português (in portuguese) --
 ###### AVISO - Este plugin adiciona e/ou muda campos xml. Este plugin não sobrescreve completamente o formulário xml de models. Eu farei essa função na próxima versão 1.0.6 (espero). Se você precisar substituir todo o formulário XML (para alterar e remover ou ocultar campos), sugiro ICUE FORM XML OVERRIDE (icueproject.com/products/override-xml-forms)
 
-#### Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo do site e componentes o site e do administrador
+#### Um Plugin para Joomla para adicionar campos de formulários xml a qualquer módulo do site e componentes do site e do administrador
 
 Modo de utilização:
 
