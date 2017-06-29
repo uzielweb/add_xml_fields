@@ -10,7 +10,7 @@ How to use:
 
 - Create your modules or component overrides in the html folder of your template according to the Joomla official documentation
 
-- Create the xml file via ftp with the desired name according the prescription in readme file embedded in the zip file of the module (exists a form example.xml to refference inside of the plugin folder)
+- Create the xml file via ftp with the desired name according the prescription in readme file instructions bellow (exists a form example.xml to refference inside of the plugin folder)
 
 - for components you can choose between "ADMINISTRATOR or SITE template override" and "ADMINISTRATOR or SITE system templates" (in this case: for admin system create administrator/template/system/forms/com_componentname/your.xml and for site system create template/system/forms/com_componentname/your.xml). If you choose "ADMINISTRATOR or SITE template override": for admin override template create administrator/template/your_default_template/html/com_componentname/forms/your.xml and for site template override create template/your_default_template/html/com_componentname/forms/your.xml 
 
@@ -36,7 +36,7 @@ Modo de utilização:
 
 - deves criar o substituto (override) do teu módulo ou componente na pasta html do teu template conforme a documentação do Joomla! 
 
-- deves criar o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me embutido no arquivo zip do módulo (existe um formulário example.xml para referência dentro da pasta do plugin). 
+- deves criar o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me nas descrições abaixo (existe um formulário example.xml para referência dentro da pasta do plugin). 
 
 - para os componentes podes escolher entre "Substituição do tema do ADMINISTRADOR ou SITE" e "Tema de sistema do ADMINISTRADOR ou SITE"
 - para tema de sistema do administrador deves criar o xml em administrator/template/system/forms/com_nomedocomponente/teu.xml
