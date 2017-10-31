@@ -1,75 +1,35 @@
 <?php
 // no direct access
 defined('_JEXEC') or die;
-class plgSystemAdd_xml_fields extends JPlugin {
+class plgSystemAdd_xml_fields extends JPlugin
+{
 /**
-
-
-
 * Load the language file on instantiation.
-
-
-
 * Note this is only available in Joomla 3.1 and higher.
-
-
-
 * If you want to support 3.0 series you must override the constructor
 
-
-
 *
-
-
-
 * @var boolean
-
-
-
 * @since <your version>
-
-
 
 */
   protected $autoloadLanguage = true;
 /**
-
-
-
 * Prepare form and add my field.
 
-
-
 *
-
-
-
 * @param   JForm  $form  The form to be altered.
-
-
-
 * @param   mixed  $data  The associated data for the form.
 
-
-
 *
-
-
-
 * @return  boolean
 
-
-
 *
-
-
-
 * @since   <your version>
 
-
-
 */
-  function onContentPrepareForm($form, $data) {
+  function onContentPrepareForm($form, $data)
+  {
     $app = JFactory::getApplication();
     $option = $app->input->get('option');
     $theadmincomponentsfiles = explode(",", $this->params->get('theadmincomponentsfiles'));
@@ -92,10 +52,13 @@ class plgSystemAdd_xml_fields extends JPlugin {
     $dbadmintemplate->setQuery($queryadmintemplate);
     $defaultadmintemplate = $dbadmintemplate->loadResult();
 //For ADMIN COMPONENTS
-    foreach ($theadmincomponents as $adminkey => $theadmincomponent) {
+    foreach ($theadmincomponents as $adminkey => $theadmincomponent)
+    {
       $theadmincomponent = trim($theadmincomponent);
-      if (in_array($option, $theadmincomponents)) {
-        switch ($this->params->get('theadmincomponentsfilespaths')) {
+      if (in_array($option, $theadmincomponents))
+      {
+        switch ($this->params->get('theadmincomponentsfilespaths'))
+        {
           case 'system' :
             JForm::addFormPath(JPATH_ADMINISTRATOR . '/templates/system/forms/' . $theadmincomponent . '/');
             break;
@@ -106,16 +69,20 @@ class plgSystemAdd_xml_fields extends JPlugin {
             JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
             break;
         }
-        foreach ($theadmincomponentsfiles as $admink => $theadmincomponentsfile) {
+        if ($option == $theadmincomponent)
+        {
           $form->loadFile($theadmincomponentsfiles[$adminkey], false);
         }
       }
     }
 //For SITE COMPONENTS
-    foreach ($thesitecomponents as $sitekey => $thesitecomponent) {
+    foreach ($thesitecomponents as $sitekey => $thesitecomponent)
+    {
       $thesitecomponent = trim($thesitecomponent);
-      if (in_array($option, $thesitecomponents)) {
-        switch ($this->params->get('thesitecomponentsfilespaths')) {
+      if (in_array($option, $thesitecomponents))
+      {
+        switch ($this->params->get('thesitecomponentsfilespaths'))
+        {
           case 'system' :
             JForm::addFormPath(JPATH_SITE . '/templates/system/forms/' . $thesitecomponent . '/');
             break;
@@ -126,16 +93,20 @@ class plgSystemAdd_xml_fields extends JPlugin {
             JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
             break;
         }
-        foreach ($thesitecomponentsfiles as $sitek => $thesitecomponentsfile) {
+        if ($option == $thesitecomponent)
+        {
           $form->loadFile($thesitecomponentsfiles[$sitekey], false);
         }
       }
     }
 // For Site Modules
-    foreach ($themodules as $key => $themodule) {
+    foreach ($themodules as $key => $themodule)
+    {
       $themodule = trim($themodule);
-      if (in_array($module, $themodules)) {
-        switch ($this->params->get('thepath')) {
+      if (in_array($module, $themodules))
+      {
+        switch ($this->params->get('thepath'))
+        {
           case 'template_override' :
             JForm::addFormPath(JPATH_SITE . '/templates/' . $defaulsitetemplate . '/html/' . $themodule . '/');
             break;
@@ -143,7 +114,8 @@ class plgSystemAdd_xml_fields extends JPlugin {
             JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
             break;
         }
-        foreach ($pieces as $k => $piece) {
+        if ($module == $themodule)
+        {
           $form->loadFile($pieces[$key], false);
         }
       }
