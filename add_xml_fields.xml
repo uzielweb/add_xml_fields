@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.5" method="upgrade" type="plugin" group="system">
-    <name>plg_system_add_xml_fields
+    <name>PLG_SYSTEM_ADD_XML_FIELDS
     </name>
     <author></author>
     <creationDate>2017 april 13
