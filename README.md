@@ -12,7 +12,9 @@ How to use:
 
 - Create the xml file via ftp with the desired name according the prescription in readme file instructions bellow (exists a form example.xml to refference inside of the plugin folder)
 
-- for components you can choose between "ADMINISTRATOR or SITE template override" and "ADMINISTRATOR or SITE system templates" (in this case: for admin system create administrator/template/system/forms/com_componentname/your.xml and for site system create template/system/forms/com_componentname/your.xml). If you choose "ADMINISTRATOR or SITE template override": for admin override template create administrator/template/your_default_template/html/com_componentname/forms/your.xml and for site template override create template/your_default_template/html/com_componentname/forms/your.xml 
+- for components you can choose between "ADMINISTRATOR or SITE template override" and "ADMINISTRATOR or SITE system templates" (in this case: for admin system create administrator/templates/system/forms/com_componentname/your.xml and for site system create templates/system/forms/com_componentname/your.xml). If you choose "ADMINISTRATOR or SITE template override": for admin override template create administrator/template/your_default_templates/html/com_componentname/forms/your.xml and for site template override create template/syour_default_template/html/com_componentname/forms/your.xml 
+
+- for modules you can choose between "SITE template override" and "SITE system templates" (in this case: for site system templates create templates/system/forms/com_componentname/your.xml). If you choose "SITE template override": for site template override create templates/your_default_template/html/mod_modulename/your.xml 
 
 - Install and enable the plugin
 
@@ -39,10 +41,12 @@ Modo de utilização:
 - deves criar o arquivo xml via ftp com o nome desejado conforme prescrição do arquivo leia-me nas descrições abaixo (existe um formulário example.xml para referência dentro da pasta do plugin). 
 
 - para os componentes podes escolher entre "Substituição do tema do ADMINISTRADOR ou SITE" e "Tema de sistema do ADMINISTRADOR ou SITE"
-- para tema de sistema do administrador deves criar o xml em administrator/template/system/forms/com_nomedocomponente/teu.xml
-- para tema de sistema do site deves criar o xml em template/system/forms/com_nomedocomponente/teu.xml
+- para tema de sistema do administrador deves criar o xml em administrator/templates/system/forms/com_nomedocomponente/teu.xml
+- para tema de sistema do site deves criar o xml em templates/system/forms/com_nomedocomponente/teu.xml
 - para substituição do tema do ADMINISTRADOR deves criar o xml em administrator/templates/teu_tema_padrão/html/com_nome_do_componente/forms/your.xml 
 - para substituição do tema do SITE deves criar em templates/teu_tema_padrão/html/com_nome_do_componente/forms/teu.xml
+
+- para módulos, você pode escolher entre "Substituição de tema do site" e "Tema de sistema do SITE" (neste caso: para tema de sistema do site, crie templates/system/forms/mod_modulename/your.xml). Se você escolher "Substituição de tema do site" crie o templates/your_default_template/html/mod_modulename/your.xml
 
 - Instala e habilita o plugin
 
