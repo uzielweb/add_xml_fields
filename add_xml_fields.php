@@ -1,8 +1,17 @@
 <?php
-// no direct access
+// No direct access
 defined('_JEXEC') or die;
-class plgSystemAdd_xml_fields extends JPlugin
+
+use Joomla\CMS\Factory;
+use Joomla\CMS\Plugin\CMSPlugin;
+use Joomla\CMS\Form\Form;
+use Joomla\Database\DatabaseDriver;
+
+
+class plgSystemAdd_xml_fields extends CMSPlugin
 {
+
+
 /**
 * Load the language file on instantiation.
 * Note this is only available in Joomla 3.1 and higher.
@@ -13,12 +22,17 @@ class plgSystemAdd_xml_fields extends JPlugin
 * @since <your version>
 
 */
-  protected $autoloadLanguage = true;
+protected $autoloadLanguage = true;
+
+public function __construct(&$subject, $config)
+{
+    parent::__construct($subject, $config);
+}
 /**
 * Prepare form and add my field.
 
 *
-* @param   JForm  $form  The form to be altered.
+* @param   Form  $form  The form to be altered.
 * @param   mixed  $data  The associated data for the form.
 
 *
@@ -30,24 +44,47 @@ class plgSystemAdd_xml_fields extends JPlugin
 */
   function onContentPrepareForm($form, $data)
   {
-    $app = JFactory::getApplication();
+    $app = Factory::getApplication();
     $option = $app->input->get('option');
-    $theadmincomponentsfiles = explode(",", $this->params->get('theadmincomponentsfiles'));
-    $theadmincomponents = explode(",", $this->params->get('theadmincomponents'));
-    $thesitecomponentsfiles = explode(",", $this->params->get('thesitecomponentsfiles'));
-    $thesitecomponents = explode(",", $this->params->get('thesitecomponents'));
-    $pieces = explode(",", $this->params->get('filenames'));
-    $themodules = explode(",", $this->params->get('themodules'));
-    $db = JFactory::getDBO();
+
+    $theadmincomponentsfiles = preg_split('/\s*,\s*/', (string) $this->params->get('theadmincomponentsfiles', ''), -1, PREG_SPLIT_NO_EMPTY);
+    $theadmincomponents = preg_split('/\s*,\s*/', (string) $this->params->get('theadmincomponents'), -1, PREG_SPLIT_NO_EMPTY);
+    $thesitecomponentsfiles = preg_split('/\s*,\s*/', (string) $this->params->get('thesitecomponentsfiles'), -1, PREG_SPLIT_NO_EMPTY);
+    $thesitecomponents = preg_split('/\s*,\s*/', (string) $this->params->get('thesitecomponents'), -1, PREG_SPLIT_NO_EMPTY);
+    $pieces = preg_split('/\s*,\s*/', (string) $this->params->get('filenames'), -1, PREG_SPLIT_NO_EMPTY);
+    $themodules = preg_split('/\s*,\s*/', (string) $this->params->get('themodules'), -1, PREG_SPLIT_NO_EMPTY);
+    if (version_compare(JVERSION, '3.0', 'ge'))
+    {
+    $db = Factory::getDBO();
+    }
+    else
+    {
+      $db = Factory::getContainer()->get(DatabaseDriver::class);
+    }
     $query = 'SELECT module' . ' FROM #__modules' . ' WHERE id = ' . $db->Quote($app->input->get("id"));
     $db->setQuery($query);
     $module = $db->loadResult();
 //Load the Site Default Template
-    $dbtemplate = JFactory::getDBO();
+// if Joomla 3.0
+    if (version_compare(JVERSION, '3.0', 'ge'))
+    {
+    $dbtemplate = Factory::getDBO();
+    }
+    else
+    {
+      $dbtemplate = Factory::getContainer()->get(DatabaseDriver::class);
+    }
     $querytemplate = "SELECT template FROM #__template_styles WHERE client_id = 0 AND home = 1";
     $dbtemplate->setQuery($querytemplate);
-    $defaulsitetemplate = $dbtemplate->loadResult();
-    $dbadmintemplate = JFactory::getDBO();
+    $defaultsitetemplate = $dbtemplate->loadResult();
+      if (version_compare(JVERSION, '3.0', 'ge'))
+    {
+    $dbadmintemplate = Factory::getDBO();
+    }
+    else
+    {
+      $dbadmintemplate = Factory::getContainer()->get(DatabaseDriver::class);
+    }
     $queryadmintemplate = "SELECT template FROM #__template_styles WHERE client_id = 1 AND home = 1";
     $dbadmintemplate->setQuery($queryadmintemplate);
     $defaultadmintemplate = $dbadmintemplate->loadResult();
@@ -60,13 +97,13 @@ class plgSystemAdd_xml_fields extends JPlugin
         switch ($this->params->get('theadmincomponentsfilespaths'))
         {
           case 'system' :
-            JForm::addFormPath(JPATH_ADMINISTRATOR . '/templates/system/forms/' . $theadmincomponent . '/');
+            Form::addFormPath(JPATH_ADMINISTRATOR . '/templates/system/forms/' . $theadmincomponent . '/');
             break;
           case 'template_override' :
-            JForm::addFormPath(JPATH_ADMINISTRATOR . '/templates/' . $defaultadmintemplate . '/html/' . $theadmincomponent . '/forms/');
+            Form::addFormPath(JPATH_ADMINISTRATOR . '/templates/' . $defaultadmintemplate . '/html/' . $theadmincomponent . '/forms/');
             break;
           case 'plugins' :
-            JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
+            Form::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
             break;
         }
         if ($option == $theadmincomponent)
@@ -84,13 +121,13 @@ class plgSystemAdd_xml_fields extends JPlugin
         switch ($this->params->get('thesitecomponentsfilespaths'))
         {
           case 'system' :
-            JForm::addFormPath(JPATH_SITE . '/templates/system/forms/' . $thesitecomponent . '/');
+            Form::addFormPath(JPATH_SITE . '/templates/system/forms/' . $thesitecomponent . '/');
             break;
           case 'template_override' :
-            JForm::addFormPath(JPATH_SITE . '/templates/' . $defaultsitetemplate . '/html/' . $thesitecomponent . '/forms/');
+            Form::addFormPath(JPATH_SITE . '/templates/' . $defaultsitetemplate . '/html/' . $thesitecomponent . '/forms/');
             break;
           case 'plugins' :
-            JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
+            Form::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
             break;
         }
         if ($option == $thesitecomponent)
@@ -108,10 +145,10 @@ class plgSystemAdd_xml_fields extends JPlugin
         switch ($this->params->get('thepath'))
         {
           case 'template_override' :
-            JForm::addFormPath(JPATH_SITE . '/templates/' . $defaulsitetemplate . '/html/' . $themodule . '/');
+            Form::addFormPath(JPATH_SITE . '/templates/' . $defaulsitetemplate . '/html/' . $themodule . '/');
             break;
           case 'plugins' :
-            JForm::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
+            Form::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
             break;
         }
         if ($module == $themodule)
