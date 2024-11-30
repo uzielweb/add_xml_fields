@@ -11,6 +11,8 @@
         <description>Add XML Fields is a Joomla system plugin that enhances XML-based functionalities.</description>
         <maintainer>Uziel via Ponto Mega</maintainer>
         <maintainerurl>https://www.pontomega.com.br</maintainerurl>
-        <targetplatform name="joomla" version="4.*"/>
+         <section>Updates</section>
+    <targetplatform name="joomla" version="((3\.(10|9|8))|(4\.(0|1|2|3|4|5|6|7|8|9))|(5\.(0|1|2|3|4|5|6|7|8|9)))"/>
+    <client>site</client>
     </update>
 </updates>
