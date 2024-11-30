@@ -1,21 +1,16 @@
+<?xml version="1.0"?>
 <updates>
     <update>
-        <name>Add XML Fields - Joomla System Plugin</name>
-        <element>add_xml_fields</element>
-        <version>5.0.1</version>
+        <name>Add XML Fields</name>
+        <element>plg_system_add_xml_fields</element>
+        <version>5.0.2</version>
         <type>plugin</type>
-        <tags>
-            <tag>stable</tag>
-        </tags>
-        <infourl title="Add XML Fields - Joomla System Plugin">https://github.com/uzielweb/add_xml_fields</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/uzielweb/add_xml_fields/archive/add_xml_fields_v5.0.2.zip</downloadurl>
+        </downloads>
+        <description>Add XML Fields is a Joomla system plugin that enhances XML-based functionalities.</description>
         <maintainer>Uziel via Ponto Mega</maintainer>
         <maintainerurl>https://www.pontomega.com.br</maintainerurl>
-        <downloads>
-            <downloadurl type="full" format="zip">https://github.com/uzielweb/add_xml_fields/archive/add_xml_fields_v5.0.1.zip</downloadurl>
-        </downloads>
-        <description>
-            Add XML Fields is a Joomla system plugin designed to enhance XML-based functionalities, providing customizable field definitions directly through XML.
-        </description>
         <targetplatform name="joomla" version="4.*"/>
     </update>
 </updates>
