@@ -7,7 +7,7 @@
     <license>GNU/Public</license>
     <authorEmail>contato@pontomega.com.br</authorEmail>
     <authorUrl>https://pontomega.com.br</authorUrl>
-    <version>5.0.1</version>
+    <version>5.0.2</version>
     <description>PLG_SYSTEM_ADD_XML_FIELDS_XML_DESCRIPTION</description>
    <updateservers>
 		<server type="extension" priority="1" name="add_xml_fields">https://raw.githubusercontent.com/uzielweb/zero/master/add_xml_fields_updates.xml</server>
