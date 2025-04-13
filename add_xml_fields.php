@@ -145,7 +145,7 @@ public function __construct(&$subject, $config)
         switch ($this->params->get('thepath'))
         {
           case 'template_override' :
-            Form::addFormPath(JPATH_SITE . '/templates/' . $defaulsitetemplate . '/html/' . $themodule . '/');
+            Form::addFormPath(JPATH_SITE . '/templates/' . $defaultsitetemplate . '/html/' . $themodule . '/');
             break;
           case 'plugins' :
             Form::addFormPath(JPATH_PLUGINS . '/system/add_xml_fields/');
